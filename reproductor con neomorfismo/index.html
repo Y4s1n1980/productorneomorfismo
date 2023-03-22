@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.min.js"></script>
+    <title>proyecto clase</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="player">
+      <div class="player__controls">
+        <div class="player__btn player__btn--small" id="previous">
+          <i class="fas fa-arrow-left">↩</i>
+        </div>
+        <h5 class="player__title">reproduciendo</h5>
+        <div class="player__btn player__btn--small" id="icon-menu">
+          <i class="fas fa-bars">≡</i>
+        </div>
+      </div>
+      <div class="player__album">
+        <img src="img/mar.jpg.jpg" alt="Album Cover" class="player__img" loading="lazy" />
+      </div>
+ 
+      <h2 class="player__artist">artista</h2>
+      <h3 class="player__song">cancion</h3>
+ 
+      <input type="range" value="20" min="0" class="player__level" id="range" />
+      <div class="audio-duration">
+        <div class="start">00:01</div>
+        <div class="end">04:30</div>
+      </div>
+ 
+      <audio class="player__audio" controls id="audio">
+        <source src="audio/audio1.mp3" type="audio"/>
+        <source src="audio/audio2.mp3" type="audio"/>
+        <source src="audio/audio3.mp3" type="audio"/>
+        <source src="audio/audio4.mp3" type="audio"/>
+        <source src="audio/audio5.mp3" type="audio"/>
+      </audio>
+ 
+      <div class="player__controls">
+        <div class="player__btn player__btn--small" id="backward">
+          <i class="fas fa-backward">⪡</i>
+        </div>
+ 
+        <div class="player__btn player__btn--medium blue play" id="play">
+          <i class="fas fa-play play-btn">▶</i>
+          <i class="fas fa-pause pause-btn hide"></i>
+        </div>
+ 
+        <div class="player__btn player__btn--small" id="forward">
+          <i class="fas fa-forward">⪢</i>
+        </div>
+      </div>
+    </div>
+ 
+ 
+    <script src="script.js"></script>
+    <script src="tests/index.spec.js"></script>
+</body>
+</html>
